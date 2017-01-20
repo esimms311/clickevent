@@ -10,7 +10,7 @@ $stateProvider
 })
 .state('agenda', {
   url: '/agenda',
-  templateUrl: './views/agenda.html',
+  templateUrl: './js/views/agenda.html',
   controller: 'agendaCtrl'
 })
 .state('maps', {
@@ -20,8 +20,13 @@ $stateProvider
 })
 .state('notes', {
   url: '/notes',
-  templateUrl: './views/notes.html'
+  templateUrl: './js/views/notes.html',
   controller: 'notesCtrl'
+})
+.state('eventinfo', {
+  url: '/eventinfo',
+  templateUrl: './js/views/eventinfo.html',
+  controller: 'eventinfoCtrl'
 })
 
 

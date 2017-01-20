@@ -1,4 +1,4 @@
-@media(max-width: 550px) {
+@media(max-width: 425px) {
   nav {
 background-color: #2bbbad;
 width: 100%;
@@ -26,7 +26,7 @@ color: white;
     border-width: 2px;
     align-items: center;
     font-size: 24px;
-    padding: 50px;
+    padding: 35px;
     margin: 10px;
     width: 25%;
   }

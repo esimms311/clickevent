@@ -1,4 +1,4 @@
-angular.module('clickEvent').controller('eventInfo', function($scope){
+angular.module('clickEvent').controller('eventinfoCtrl', function($scope){
 
 
 
