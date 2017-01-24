@@ -1,5 +1,4 @@
-angular.module('clickEvent').controller('mapsCtrl', function($scope, mapsService){
-
+angular.module('clickEvent').controller('mapsCtrl', function($scope){
 
 
 

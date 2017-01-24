@@ -1,0 +1,79 @@
+@media(max-width: 425px) {
+
+/*dont delete anything below*/
+#mobile-demo {
+  padding-left: 20px;
+  cursor: pointer;
+  font-size: 18px;
+
+}
+nav {
+background-color: #2bbbad;
+width: 100%;
+max-height: 15vh;
+margin-left: -10px;
+margin-right: 0px;
+padding: 9px;
+margin-top: -9px;
+color: black;
+}
+nav li {
+  color: black;
+}
+.logo{
+  text-align: center;
+  font-size: 36px;
+  margin-top: 25px;
+  font-weight: bold;
+}
+  h4 {
+  text-align: center;
+  }
+  .agenda, .maps, .notes, .eventInfo{
+    display: inline-flex;
+    justify-content: space-around;
+    align-content: space-around;
+    flex-wrap: wrap;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 17px;
+    border-color: black;
+    align-items: center;
+    font-size: 26px;
+    padding: 36px;
+    margin-left: 40px;
+    margin-bottom: 27px;
+    width: 35%;
+    color: white
+    /*display: inline-flex;
+    justify-content: space-around;
+    align-content: space-around;
+    flex-wrap: wrap;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 20px;
+    border-color: black;
+    align-items: center;
+    font-size: 24px;
+    padding: 35px;
+    margin: 10px;
+    width: 35%;
+    color: white;*/
+  }
+  .maps {
+    background-image: url('https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQaiKLdM2x_enkjk7fyGs_kQArBxBJL0_D65eke0IXSQRDhFeV_');
+    background-size: 111%;
+  }
+  .agenda {
+    background-image: url('http://www.therefill.com/RefillPicture1.jpg');
+    background-size: 107%;
+  }
+  .notes {
+    background-image: url('http://4.bp.blogspot.com/-Akf8fpmqfoE/VHfmpaxAgMI/AAAAAAAADC4/_jBWqXMvS5I/s1600/note%2Btaking%2Btips%2Bfor%2Bielts%2Band%2Btoefl.jpg');
+    background-size: 120%;
+  }
+  .eventInfo {
+    background-image: url('https://a248.e.akamai.net/secure.meetupstatic.com/photos/event/4/3/e/e/600_442277390.jpeg');
+    background-size: 153%;
+  }
+}
