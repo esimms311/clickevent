@@ -1,4 +1,7 @@
 <h4> Notes Page </h4>
+
+
+<br><br><br><br>
 <div class="note-area" ng-show="!editMode">
     <table>
         <tr ng-repeat="note in notes|orderBy:'id'">
@@ -19,4 +22,7 @@
 <span>
     <a href="#" ng-click="openEditor()" ng-show="!editMode">Add Note</a>
 </span>
-<div notepad/>
+
+<div notepad> </div>
+<br><br><br>
+<!-- <notepad></notepad> -->
