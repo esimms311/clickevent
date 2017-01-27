@@ -76,4 +76,7 @@ nav li {
     background-image: url('https://a248.e.akamai.net/secure.meetupstatic.com/photos/event/4/3/e/e/600_442277390.jpeg');
     background-size: 153%;
   }
+  .loginstyle {
+    padding: 35px;
+  }
 }

@@ -3,7 +3,7 @@ angular.module('clickEvent', ['ui.router', 'ngMap']).config(function($stateProvi
 $urlRouterProvider.otherwise('/')
 
 $stateProvider
-.state('homeLanding', {
+.state('mainLanding', {
   url: '/',
   templateUrl: './js/views/mainLanding.html',
   controller: 'mainLandingCtrl'
@@ -27,6 +27,11 @@ $stateProvider
   url: '/eventinfo',
   templateUrl: './js/views/eventinfo.html',
   controller: 'eventinfoCtrl'
+})
+.state('login', {
+  url: '/login',
+  templateUrl: './js/views/login.html',
+  controller: 'loginCtrl'
 })
 
 

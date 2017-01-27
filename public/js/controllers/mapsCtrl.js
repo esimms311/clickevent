@@ -1,4 +1,4 @@
-angular.module('clickEvent').controller('mapsCtrl', function($scope){
+angular.module('clickEvent').controller('mapsCtrl', function($scope, $state, userService){
 //
 // $scope.getMap = function(){
 //   mapsService.getMap().then(function(response){
@@ -7,5 +7,14 @@ angular.module('clickEvent').controller('mapsCtrl', function($scope){
 //   })
 // }
 //
+var loggedIn = function(){
+  userService.getCurrentUser().then( function(res){
+    console.log(res);
+    if(!res.data){
+      $state.go('mainLanding');
+    }
+  })
+}
+loggedIn()
 //
 })

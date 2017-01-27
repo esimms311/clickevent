@@ -8,27 +8,29 @@
 
     <title>ClickEvent</title>
   </head>
-  <body>
+  <body ng-controller="indexCtrl">
 
     <nav>
    <div class="nav-wrapper">
      <a href="#!" class="brand-logo">Click Event</a>
      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
      <ul class="right hide-on-med-and-down">
-       <li ui-sref="homeLanding">Home</li>
+       <li ui-sref="mainLanding">Home</li>
        <li ui-sref="agenda">Agenda</li>
        <li ui-sref="maps">Map</li>
        <li ui-sref="notes">Notes</li>
        <li ui-sref="eventinfo">Event Information</li>
 
      </ul>
-     <ul class="side-nav" id="mobile-demo">
-       <li ui-sref="homeLanding">Home</a></li>
-       <li ui-sref="agenda">Agenda</a></li>
-       <li ui-sref="maps">Map</a></li>
-       <li ui-sref="notes">Notes</a></li>
-       <li ui-sref="eventinfo">Event Information</a></li>
-     </ul>
+     <div class="side-nav" id="mobile-demo">
+       <a ng-if="notIn" ui-sref='login'> Login </a>
+       <a ng-if="in" href="/logout">Logout</a>
+       <a ui-sref="mainLanding">Home</a>
+       <a ui-sref="agenda">Agenda</a>
+       <a ui-sref="maps">Map</a>
+       <a ui-sref="notes">Notes</a>
+       <a ui-sref="eventinfo">Event Information</a>
+     </div>
    </div>
  </nav>
 
@@ -47,10 +49,13 @@
     <script src = '/js/controllers/mainLandingCtrl.js'></script>
     <script src = '/js/controllers/agendaCtrl.js'></script>
     <script src = '/js/controllers/mapsCtrl.js'></script>
+    <script src = '/js/controllers/indexCtrl.js'></script>
     <script src = '/js/controllers/notesCtrl.js'></script>
     <script src = '/js/controllers/eventinfoCtrl.js'></script>
+    <script src = '/js/controllers/loginCtrl.js'></script>
     <script src = '/js/services/mapsService.js'></script>
     <script src = '/js/services/notesFactory.js'></script>
+    <script src = '/js/services/userService.js'></script>
     <script src = '/js/dir/notesDir.js'></script>
     <script src = '/scripts.js'></script>
 
