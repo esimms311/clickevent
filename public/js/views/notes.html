@@ -1,7 +1,7 @@
 <h4> Notes Page </h4>
 
 
-<br><br><br><br>
+<!-- <br><br><br><br>
 <div class="note-area" ng-show="!editMode">
     <table>
         <tr ng-repeat="note in notes|orderBy:'id'">
@@ -25,4 +25,19 @@
 
 <div notepad> </div>
 <br><br><br>
-<!-- <notepad></notepad> -->
+-->
+
+<div class="notebook">
+  <header></header>
+  <span class="extraPages">
+  <textarea id="page" cols="20" rows="50" placeholder="Type note"></textarea>
+  </span>
+  <br>
+  <footer>
+    <button class="seeOutput" title="see note">&#59255;</button>
+    <button class="range" title="progress">&#59241;</button>
+    <button class="newPage" title="new page">&#128229;</button>
+  </footer>
+</div>
+<div class="output">
+</div>
