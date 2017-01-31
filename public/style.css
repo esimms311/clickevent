@@ -97,4 +97,12 @@ nav li {
     margin-left: auto;
     margin-right: auto;
   }
+  .buttonSpace {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+	align-content: center;
+}
 }

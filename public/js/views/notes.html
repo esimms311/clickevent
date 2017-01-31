@@ -1,43 +1,18 @@
 <h4> Notes Page </h4>
 
-
-<!-- <br><br><br><br>
-<div class="note-area" ng-show="!editMode">
-    <table>
-        <tr ng-repeat="note in notes|orderBy:'id'">
-            <td width="100%">
-                 <a href="#" ng-click="openEditor(note.id)" class='notetext'>{{note.title}}</a>
-                 <br/>
-            </td>
-            <td>
-                <button ng-click="delete(note.id)" class='deletebutton'>Delete</button>
-            </td>
-        </tr>
-    </table>
-</div>
-<div id="editor" ng-show="editMode" class="note-area" contenteditable="true" ng-bind="noteText"></div>
-<span>
-    <a href="#" ng-click="save()" ng-show="editMode">Save</a>
-</span>
-<span>
-    <a href="#" ng-click="openEditor()" ng-show="!editMode">Add Note</a>
-</span>
-
-<div notepad> </div>
-<br><br><br>
--->
-
 <div class="notebook">
   <header></header>
   <span class="extraPages">
-  <textarea id="page" cols="20" rows="50" placeholder="Type note"></textarea>
+  <textarea id="page" cols="20" rows="50" placeholder="well...start note taking" ng-model = 'notes'></textarea>
   </span>
   <br>
-  <footer>
-    <button class="seeOutput" title="see note">&#59255;</button>
-    <button class="range" title="progress">&#59241;</button>
-    <button class="newPage" title="new page">&#128229;</button>
+  <footer class = "buttonSpace">
+    <button class="seeNotes" title="see note">See Notes</button>
+    <button class="createPage" title="progress">Create New</button>
+    <button class="savePage" title="new page" ng-click = 'saveNote(notes)'>Save Note</button>
   </footer>
 </div>
 <div class="output">
 </div>
+<footer class="page">
+</footer>

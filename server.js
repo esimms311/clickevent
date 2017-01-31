@@ -135,67 +135,16 @@ app.get('/verifyuser', function(req, res){
   }
 })
 
-// passport.use('local', new LocalStrategy(
-//   function(username, password, done) {
-//     db.user_info.findOne({username: username}, function(err, user) {
-//       if (err) { return done(err); }
-//       if (!user) {return done(null, false); }
-//       if (user_info.password != password) { return done(null, false); }
-//       return done(null, user);
-//     })
-//   }
-// ))
-//
-// passport.serializeUser(function(user, done) {
-//   return done(null, user);
-// })
-//
-// passport.deserializeUser(function(user, done) {
-//   return done(null, user);
-// })
-//
-// app.post('/auth/local', passport.authenticate('local'), function(req, res) {
-//   res.status(200).redirect('/maps');
-// });
-//
-// function isAuthed(req, res, next) {
-//   if (req.user) {
-//     next();
-//   } else {
-//     res.status(403).send({msg: 'YOU SHALL NOT PASS'});
-//   }
-// }
-//
-// app.get('/auth/me', isAuthed, function(req, res) {
-//   if (req.user) {
-//     consoel.log(req.user);
-//     res.status(200).send(req.user);
-//   } else {
-//     consoel.log('No user!')
-//     res.status(200).send();
-//   }
-// })
-//
-// app.get('/auth/logout', function(req, res) {
-//   req.logout();
-//   res.redirect('/maps');
-// })
-//
-// app.get('/eventinfo', function(req, res) {
-//   db.get_all_userinfo(function(err, user_info){
-//     res.send(user_info);
-//   });
-// });
-//
-// app.get('/user_info', function(req, res) {
-//   res.send({user_info:[]});
-// });
-//
-// app.post('/user_info', function(req, res) {
-//   res.send({id: 123});
-// });
-
-
+app.post('/api/notes', function(req, res){
+  db.createnote([req.body.notes, req.body.userid], function(err, success){
+    if(err){
+      res.status(500).json(err)
+    }
+    else {
+      res.status(200).json('note saved')
+    }
+  })
+})
 
 
 

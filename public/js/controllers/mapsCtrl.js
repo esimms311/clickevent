@@ -7,14 +7,9 @@ angular.module('clickEvent').controller('mapsCtrl', function($scope, $state, use
 //   })
 // }
 //
-var loggedIn = function(){
-  userService.getCurrentUser().then( function(res){
-    console.log(res);
-    if(!res.data){
-      $state.go('mainLanding');
-    }
-  })
+if(!userService.currentUser){
+  $state.go('mainLanding')
+  return
 }
-loggedIn()
 //
 })

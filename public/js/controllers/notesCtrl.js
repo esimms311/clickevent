@@ -1,13 +1,15 @@
-angular.module('clickEvent').controller('notesCtrl', function($scope, notesFactory, $state, userService){
+angular.module('clickEvent').controller('notesCtrl', function($scope, notesService, $state, userService){
 
-  var loggedIn = function(){
-    userService.getCurrentUser().then( function(res){
-      console.log(res);
-      if(!res.data){
-        $state.go('mainLanding');
-      }
-    })
+  if(!userService.currentUser){
+    $state.go('mainLanding')
+    return
   }
-  loggedIn()
+
+$scope.saveNote = function(notes){
+  var noteObj = {notes : notes, userid : userService.currentUser.id}
+  notesService.saveNote(noteObj).then(function(response){
+    console.log(response.data);
+  })
+}
 
 })

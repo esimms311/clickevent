@@ -6,8 +6,10 @@ angular.module('clickEvent').controller('indexCtrl', function($scope, $state, us
       if(!res.data){
         $scope.in = false;
         $scope.notIn = true;
+        userService.currentUser = '';
       }
       else {
+        userService.currentUser = res.data;
         $scope.in = true;
         $scope.notIn = false;
       }
