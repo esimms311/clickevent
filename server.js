@@ -57,13 +57,11 @@ passport.use(new GoogleStrategy({
     }
   })
 }))
-//
-//
+
 app.get('/auth/google', passport.authenticate('google', {scope: ['email', 'https://www.googleapis.com/auth/plus.login', 'https://www.googleapis.com/auth/userinfo.profile']}));
 app.get('/auth/google/callback', passport.authenticate('google', {failureRedirect: '/'}), function(req, res) {
   res.redirect('/')
 })
-
 
 // Facebook Strategy complete!!
 passport.use('facebook', new FacebookStrategy({
@@ -93,7 +91,6 @@ passport.deserializeUser(function(user, done) {
   if(user.googleid){
     db.getUserByGoogleId([user.googleid], function(err, us){
       return done(null, us[0]);
-
     })
   }
   else {
@@ -101,12 +98,9 @@ passport.deserializeUser(function(user, done) {
 
     return done(null, u[0]);
   })
-
 }
 })
-
 // send to facebook to sign in
-
 app.get('/auth/facebook',
 passport.authenticate('facebook', {scope: ['email']}))
 
@@ -122,7 +116,6 @@ app.get('/logout', function(req, res){
     res.redirect('/')
   })
 })
-
 
 app.get('/verifyuser', function(req, res){
   if(!req.session.passport){
@@ -146,7 +139,13 @@ app.post('/api/notes', function(req, res){
   })
 })
 
-
+app.get('/api/notes', function(req, res) {
+  db.getnote(req.body.notes), function (err, success){
+    res.status(200).json({
+      notes: body.notes
+    });
+  }
+})
 
 
 

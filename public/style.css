@@ -105,4 +105,25 @@ nav li {
 	align-items: center;
 	align-content: center;
 }
+.speakerTile img{
+  max-width: 100px;
+  float: right;
+  margin-right: 15px;
+}
+.speakerTile {
+  border-style: groove;
+  border-width: 2px;
+  border-radius: 4px;
+  margin-left: 10px;
+  margin-right: 5px;
+  padding-bottom: 40px;
+
+}
+.agendaTime{
+  float:right;
+  margin-right: 12px;
+}
+.agendaOption{
+  /*display: none;*/
+}
 }

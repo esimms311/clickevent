@@ -33,6 +33,11 @@ $stateProvider
   templateUrl: './js/views/login.html',
   controller: 'loginCtrl'
 })
+.state('questvote', {
+  url: '/questvote',
+  templateUrl: './js/views/questvote.html',
+  controller: 'questvoteCtrl'
+})
 
 
 });

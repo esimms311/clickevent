@@ -12,4 +12,8 @@ $scope.saveNote = function(notes){
   })
 }
 
+$scope.editNote = function(notes){
+  userService.currentUser.notes 
+}
+
 })

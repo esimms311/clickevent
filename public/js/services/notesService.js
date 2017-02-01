@@ -8,4 +8,11 @@ return $http({
 })
 }
 
+this.getNotes = function(noteObj){
+  return $http({
+    method: 'GET',
+    url: '/api/notes',
+
+  })
+}
 })
