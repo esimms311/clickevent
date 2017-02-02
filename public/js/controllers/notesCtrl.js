@@ -12,8 +12,18 @@ $scope.saveNote = function(notes){
   })
 }
 
-$scope.editNote = function(notes){
-  userService.currentUser.notes 
-}
+// $scope.editNote = function(notes){
+//   notesService.currentUser.notes
+// }
 
+
+
+
+
+// getNotes: function(req, res, next) {
+//   res.status(200).json({
+//     noteObj.notes
+//   })
+// }
+//
 })

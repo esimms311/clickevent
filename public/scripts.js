@@ -7,11 +7,12 @@ $(document).ready(function(){
     draggable: true
   });
 
-  $("button").on('click', 'p',function() {
-    $(this).show("slow");
-  });
+  // $(".output").hide();
+  // var counter = 1;
 
-
+  // $("button").on('click', 'p',function() {
+  //   $(this).show("slow");
+  // });
 
 
 });

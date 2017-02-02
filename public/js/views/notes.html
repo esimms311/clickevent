@@ -9,10 +9,10 @@
   <footer class = "buttonSpace">
     <button class="seeNotes" title="see note" ng-click = 'getNotes(notes)'>See Notes</button>
     <!-- <button class="createPage" title="progress">Create New</button> -->
-    <button class="savePage" title="new page" ng-click = 'saveNote(notes)'>Save Note</button>
+    <a class="waves-effect waves-light btn" ng-click='saveNote(notes)'><i class="material-icons right">mode_edit</i>Save Note</a>
+    <button class="editPage" title="edit note" ng-click= 'editNote(notes)'>Edit Note</button>
   </footer>
 </div>
 <div class="output">
+  <h4> Your Notes...</h4>
 </div>
-<footer class="page">
-</footer>

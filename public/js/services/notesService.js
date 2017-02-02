@@ -15,4 +15,12 @@ this.getNotes = function(noteObj){
 
   })
 }
+
+this.editNote = function(noteObj){
+  return $http({
+    method: 'PUT',
+    url: '/api/notes',
+    data: noteObj
+  })
+}
 })

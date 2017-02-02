@@ -15,22 +15,20 @@ var app = express();
 
 app.use(bodyParser.json());
 app.use(cookieParser());
-
+app.use(cors());
 app.use(session({
   secret: config.secret,
   resave: false,
   saveUninitialized: false
 }))
-
 app.use(session({
   secret: config.secret,
   resave: true,
   saveUninitialized:false,
-  }));
+}));
 
 app.use(passport.initialize());
 app.use(passport.session());
-
 app.use(express.static(__dirname + '/public'))
 
 // this connects to postgres
@@ -139,19 +137,60 @@ app.post('/api/notes', function(req, res){
   })
 })
 
-app.get('/api/notes', function(req, res) {
-  db.getnote(req.body.notes), function (err, success){
+app.get('/notes', function(req, res, next) {
+  db.getnote(req.body.notes), function (err, success, next){
     res.status(200).json({
       notes: body.notes
     });
   }
 })
 
+app.put('/notes', function(req, res){
+  db.updateNote([req.body.notes, req.body.userid], function(err, success){
+    if(err){
+      res.status(500).json(err)
+    }
+    else {
+      res.status(200).json({
+        notes: body.notes
+      });
+    }
+  })
+});
 
+var questions = [
+  {id:1, question: 'What is the best framework to use?', likes: 2},
+  {id:2, question: 'When are we going to get a Hawaiian Punch drinking fountain?', likes: 2},
+  {id:3, question: 'Where would you reccomend we look for jobs?', likes: 1}
+]
 
+app.get('/api/questions', function(req, res){
+  res.status(200).json(questions)
+})
 
+app.post('/api/questions', function(req, res){
+  console.log(req.body);
+  questions.push({id:1, question:req.body.newQuestion})
+  res.status(200).json('success')
+})
 
+app.put('/api/questions/:id', function(req, res){
+  for(var i = 0; i < questions.length; i++) {
+    if(questions[i].id==req.params.id) {
+        questions[i].question = req.body.question
+    }
+  }
+  res.status(200).json('updated!')
+})
 
+app.delete('/api/customers/:id', function(req, res){
+  questions.forEach(function(val, i, arr){
+    if(val.id == req.params.id){
+      arr.splice(i,1)
+    }
+  })
+  res.status(200).json('deleted')
+})
 
 
 
@@ -189,4 +228,4 @@ app.get('/api/notes', function(req, res) {
 var port = 4000
 app.listen(port, function(){
   console.log('Listening on', port);
-});
+})

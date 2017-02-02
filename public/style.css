@@ -5,10 +5,12 @@
   padding-left: 20px;
   cursor: pointer;
   font-size: 18px;
-
+}
+html {
+  /*background-color: lightgray;*/
 }
 nav {
-background-color: #2bbbad;
+background-color: #25AAE1;
 width: 100%;
 max-height: 15vh;
 margin-left: -10px;
@@ -83,7 +85,7 @@ nav li {
     background-color: green;
   }
   .fa {
-    color: #2bbbad;
+    color: #25AAE1;
     display:block;
     margin-left: 100px;
     margin-right: -50px;
@@ -109,6 +111,7 @@ nav li {
   max-width: 100px;
   float: right;
   margin-right: 15px;
+  max-height: 107px;
 }
 .speakerTile {
   border-style: groove;
@@ -116,14 +119,69 @@ nav li {
   border-radius: 4px;
   margin-left: 10px;
   margin-right: 5px;
-  padding-bottom: 40px;
-
+  padding-bottom: 94px;
+}
+.btn {
+  background-color:  #25AAE1;
 }
 .agendaTime{
   float:right;
   margin-right: 12px;
 }
 .agendaOption{
-  /*display: none;*/
+  margin-bottom: 0px;
+    padding-top: 14px;
+    padding-left: 4px;
+    float: left;
+  }
+
+  .incrementup { border-radius: 50% 50% 0 0;
+    background: green;
+    height: 50%;
+    margin-bottom: .5rem;
+  }
+  .incrementdown { border-radius: 0 0 50% 50%
+  }
+  .count { border-radius: 50%;
 }
+.vote {
+  display: flex;
+  flex-direction: column;
+  font-family: "Noto Sans";
+  position: relative;
+  width: 10px;
+  height: 10px;
+  margin: 1rem;
+}
+.increment {
+  flex: 1 0 0;
+  text-align: center;
+  opacity: .5;
+  transition: .3s;
+  cursor: pointer;
+}
+.questionsList {
+  border-style: groove;
+  border-width: 1px;
+  border-color: blue;
+  border-radius: 5px;
+  margin: 8px 15px;
+  font-size: 17px;
+}
+.btn-floating {
+  font-size: 24px;
+  margin-left: 50px;
+}
+.submitQuestion{
+  margin: 0px 20px;
+  border-style: solid;
+  border-radius: 6px;
+  border-color: red;
+}
+
+.arrowCircle i {
+  color: green;
+  margin-left: 45px;
+}
+
 }
