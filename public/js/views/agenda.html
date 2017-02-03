@@ -1,10 +1,11 @@
-<h4> Agenda Page </h4>
+<h4> Agenda </h4>
 <div ng-controller = 'agendaCtrl'>
 <div class ='speakerTile' ng-repeat = 's in speakers' ng-click=options()>
   <p class = 'agendaTime'><strong> {{s.time}}</strong></p>
   <p><strong>{{s.session}}</strong></p>
 
   <img ng-src='{{s.image}}'>
+  <br>
   <p>{{s.name}}</p>
 
   <p>Room: {{s.location}}</p>
