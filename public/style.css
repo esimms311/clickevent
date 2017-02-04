@@ -42,7 +42,7 @@ nav a {
   font-weight: bold;
   /*font-family: 'Molle', cursive;*/
 }
-  h4 {
+  h4, h5 {
   text-align: center;
   }
   .agenda, .maps, .notes, .eventInfo{
@@ -61,48 +61,49 @@ nav a {
     margin-bottom: 27px;
     width: 35%;
     color: white
-    /*display: inline-flex;
-    justify-content: space-around;
-    align-content: space-around;
-    flex-wrap: wrap;
-    border-style: solid;
-    border-width: 2px;
-    border-radius: 20px;
-    border-color: black;
-    align-items: center;
-    font-size: 24px;
-    padding: 35px;
-    margin: 10px;
-    width: 35%;
-    color: white;*/
-  }
-  .maps {
-    background-image: url('https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQaiKLdM2x_enkjk7fyGs_kQArBxBJL0_D65eke0IXSQRDhFeV_');
-    background-size: 111%;
+
   }
   .agenda {
-    background-image: url('http://www.therefill.com/RefillPicture1.jpg');
-    background-size: 107%;
+    background-image: url('https://i.vimeocdn.com/video/557487646.jpg?mw=1920&mh=1080&q=70');
+    background-size: 139%;
+    /*filter: grayscale(100%);*/
+  }
+  .maps {
+    background-image: url('http://provomayor.com/wp-content/uploads/2016/09/The_Startup_Building_Provo_Utah_Web_2016-08-19.jpg');
+    background-size: 109%;
   }
   .notes {
-    background-image: url('http://4.bp.blogspot.com/-Akf8fpmqfoE/VHfmpaxAgMI/AAAAAAAADC4/_jBWqXMvS5I/s1600/note%2Btaking%2Btips%2Bfor%2Bielts%2Band%2Btoefl.jpg');
-    background-size: 120%;
+    background-image: url('https://lh3.googleusercontent.com/proxy/V_rTrgatZIz7aIcs-kuNI4aXmQDsl9OkQ3pXa9GZspBO84qQvse1FQTxFUWJj-_19kjNvBGPpFf8QXoBQ5lDzydDbsH4fu2Hf3AwxQxtJ9Ay=w530-h265-p');
+    background-size: 153%;
   }
   .eventInfo {
     background-image: url('https://a248.e.akamai.net/secure.meetupstatic.com/photos/event/4/3/e/e/600_442277390.jpeg');
     background-size: 153%;
   }
   .loginstyle {
-    padding: 35px;
+    border-style: groove;
+    border-width: 3px;
+    border-color: #25AAE1;
+    color: #25AAE1;
+    display:block;
+    justify-content: space-between;
+    text-align: center;
+    margin: -15px 10px;
+    padding: 25px 25px;
+  }
+  .loginstyle button {
+    padding: 0px 8px;
+    margin: -3px 34px;
+  }
+  .loginstyle h5 {
+    color: black;
   }
   .agendaex{
     background-color: green;
   }
   .fa {
-    color: #25AAE1;
-    display:block;
-    margin-left: 100px;
-    margin-right: -50px;
+    /*margin-left: 100px;*/
+    /*margin-right: -50px;*/
   }
   textarea {
     width: 98%;
@@ -131,10 +132,15 @@ nav a {
   border-style: groove;
   border-width: 2px;
   border-radius: 4px;
-  margin-left: 10px;
-  margin-right: 5px;
+  margin-left: 5px;
+  margin-right: 1px;
   margin-bottom: 10px;
-  padding-bottom: 75px;
+  padding-bottom: 88px;
+  font-size: 15px;
+  border-color: #25AAE1;
+}
+#session {
+  margin-left: 10px;
 }
 .btn {
   background-color:  #25AAE1;
@@ -146,16 +152,9 @@ nav a {
 .agendaOption{
   margin-bottom: 0px;
     padding-top: 14px;
-    padding-left: 4px;
+    padding-left: 1px;
+    padding-right: 0px;
     float: left;
-  }
-
-  .incrementup { border-radius: 50% 50% 0 0;
-    background: green;
-    height: 50%;
-    margin-bottom: .5rem;
-  }
-  .incrementdown { border-radius: 0 0 50% 50%
   }
   .count { border-radius: 50%;
 }
@@ -177,21 +176,41 @@ nav a {
 }
 .questionsList {
   border-style: groove;
-  border-width: 1px;
-  border-color: blue;
-  border-radius: 5px;
+  border-width: 2px;
+  border-color: #25AAE1;
+  border-radius: 8px;
   margin: 8px 15px;
-  font-size: 17px;
+  margin-right: 12px;
+  font-size: 15px;
+  padding: 0px 4px;
+}
+.questionsList p{
+  padding-right: 50px
+
+}
+.questionsList a {
+  float: right;
+  margin-top: -45px;
+  margin-right: 6px;
+  font-size: 15px;
+}
+.alignlist {
+
 }
 .btn-floating {
-  font-size: 24px;
-  margin-left: 50px;
+  font-size: 18px;
+  margin-left: 0px;
+  padding: 0px 5px;
 }
 .submitQuestion{
   margin: 0px 20px;
   border-style: solid;
   border-radius: 6px;
-  border-color: red;
+  /* border-color: red; */
+  position: fixed;
+  width: 100%;
+  bottom: 0px;
+  left: -20px;
 }
 
 .arrowCircle i {

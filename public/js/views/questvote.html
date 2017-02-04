@@ -1,17 +1,20 @@
-<div class = 'questiondesign'
+<div class = 'questiondesign'>
+  <br>
 <h5> send question here </h5>
-<br><br>
+<br>
 
+<div class= 'alignlist'>
 <div class='questionsList' ng-repeat='question in questions track by $index'>
-    <div>{{question.question}}<a ng-click='plusOne(question)' class="btn-floating btn-small waves-effect waves-light blue">+ {{question.likes}}</a></div>
-    <!-- <div ng-if = '($index === selected)' class = 'inputs'>
-    <input type = 'text' question="" ng-model = 'question'> -->
-    <!-- <button type = 'button' ng-click = 'update({question:question, id:$index + 1})'>Update</button> -->
+    <p>{{question.question}}</p>
+    <a ng-click='plusOne(question)' class="btn-floating btn-small waves-effect waves-light blue">+ {{question.likes}}</a>
+
+  </div>
 
 </div>
+
 <br>
 <div class='submitQuestion'>
     <input type='text' ng-model='question'>
     <button type='button' ng-click='addQuestion(question)'> Add question</button>
-</div>
+  </div>
 </div>
