@@ -9,13 +9,15 @@
 
     <title>ClickEvent</title>
   </head>
-  <body ng-controller="indexCtrl" background='https://unsplash.it/640/425?image=1051'>
+  <body ng-controller="indexCtrl">
 
     <nav>
    <div class="nav-wrapper">
      <a href="#!" class="brand-logo" style= "font-family: 'Molle', cursive;">Click Event</a>
      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
      <ul class="right hide-on-med-and-down">
+       <li ng-if='notIn' ui-sref = 'login'> Login </li>
+       <li ng-if='in' ui-sref = '/logout'>Logout</li>
        <li ui-sref="mainLanding">Home</li>
        <li ui-sref="agenda">Agenda</li>
        <li ui-sref="maps">Map</li>
@@ -42,7 +44,7 @@
 
 
 <!-- integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"> -->
-    <script src="https://code.jquery.com/jquery-3.1.1.js" ></script>
+    <script type= "text/javascript" src="https://code.jquery.com/jquery-3.1.1.js" ></script>
     <script src = 'https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.js'></script>
     <script src = 'https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.2/angular-ui-router.js'></script>
     <script src = 'https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.js'></script>
@@ -62,7 +64,7 @@
     <script src = '/js/services/notesService.js'></script>
     <script src = '/js/services/userService.js'></script>
     <script src = '/js/dir/agendaDirective.js'></script>
-    <script src = '/scripts.js'></script>
+    <script type= "text/javascript" src = 'scripts.js'></script>
 
   </body>
 </html>

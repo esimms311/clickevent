@@ -1,4 +1,4 @@
-@media(max-width: 425px) {
+/*@media(max-width: 425px) {*/
 
 /*dont delete anything below*/
 #mobile-demo {
@@ -27,13 +27,16 @@ margin-left: 0px;
 margin-right: 0px;
 padding: 9px;
 margin-top: -9px;
-color: black;
-font-size: 35px;
+color: white;
+font-size: 20px;
 line-height: 59px;
+cursor: pointer;
 /*font-family: 'Molle', cursive;*/
 }
-nav a {
+nav li {
   color: white;
+  margin-left: 13px;
+  font-size: 18px
 }
 .logo{
   text-align: center;
@@ -204,18 +207,137 @@ nav a {
 }
 .submitQuestion{
   margin: 0px 20px;
-  border-style: solid;
-  border-radius: 6px;
-  /* border-color: red; */
   position: fixed;
   width: 100%;
   bottom: 0px;
   left: -20px;
+      padding: 0px 25px;
 }
 
-.arrowCircle i {
-  color: green;
-  margin-left: 45px;
-}
 
 }
+/*body {
+  background-image: url('http://www.zingerbug.com/Backgrounds/background_images/white_parchment_paper_wallpaper_texture_seamless.jpg');
+
+}
+nav {
+background-color: #25AAE1;
+width: 100%;
+height: 65px;
+margin-left: 0px;
+margin-right: 0px;
+padding: 9px;
+margin-top: -9px;
+color: black;
+font-size: 25px;
+line-height: 59px;
+cursor: pointer;
+}
+nav li {
+  margin: 10px;
+  font-size: 17px;
+  margin-top: auto;
+  color: white;
+}
+nav .brandlogo {
+position: absolute;
+    color: #fff;
+    display: inline-block;
+    font-size: 35px;
+    padding: 0;
+    padding-left: 20px;
+    white-space: nowrap;
+}
+h4, h5 {
+text-align: center;
+}
+
+.agenda, .maps, .notes, .eventInfo{
+  display: inline-flex;
+  justify-content: space-around;
+  align-content: space-around;
+  flex-wrap: wrap;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 17px;
+  border-color: black;
+  align-items: center;
+  font-size: 26px;
+  padding: 56px;
+  margin-left: 96px;
+  margin-bottom: 55px;
+  width: 35%;
+  color: white;
+}
+
+.agenda {
+  background-image: url('https://i.vimeocdn.com/video/557487646.jpg?mw=1920&mh=1080&q=70');
+  background-size: 139%;
+}
+.maps {
+  background-image: url('http://provomayor.com/wp-content/uploads/2016/09/The_Startup_Building_Provo_Utah_Web_2016-08-19.jpg');
+  background-size: 109%;
+}
+.notes {
+  background-image: url('https://lh3.googleusercontent.com/proxy/V_rTrgatZIz7aIcs-kuNI4aXmQDsl9OkQ3pXa9GZspBO84qQvse1FQTxFUWJj-_19kjNvBGPpFf8QXoBQ5lDzydDbsH4fu2Hf3AwxQxtJ9Ay=w530-h265-p');
+  background-size: 153%;
+}
+.eventInfo {
+  background-image: url('https://a248.e.akamai.net/secure.meetupstatic.com/photos/event/4/3/e/e/600_442277390.jpeg');
+  background-size: 153%;
+}
+.questionsList {
+  border-style: groove;
+      border-width: 2px;
+      border-color: #25AAE1;
+      border-radius: 8px;
+      margin-top: 5px;
+      margin-left: 45px;
+      font-size: 15px;
+
+      padding-left: 5px;
+      width: 90%;
+      padding-right: 5px;
+}
+.questionsList p{
+  padding-right: 50px
+
+}
+.questionsList a {
+  float: right;
+  margin-top: -45px;
+  margin-right: 6px;
+  font-size: 15px;
+
+}
+.speakerTile img{
+  max-width: 1000px;
+  float: right;
+  margin-top: -68px;
+  margin-right: 45px;
+  max-height: 190px
+}
+.speakerTile {
+border-style: groove;
+border-width: 2px;
+border-radius: 4px;
+margin-left: 5px;
+margin-right: 1px;
+margin-bottom: 10px;
+padding-bottom: 28px;
+font-size: 15px;
+padding-left: 29px;
+border-color: #25AAE1;
+font-weight: 500;
+}
+.btn {
+  background-color:  #25AAE1;
+}
+.submitQuestion{
+  margin: 0px 20px;
+
+  position: fixed;
+  width: 100%;
+  bottom: 10px;
+  left: -20px;
+      padding: 0px 25px;
