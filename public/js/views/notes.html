@@ -3,13 +3,20 @@
 <div class="notebook">
   <header></header>
   <span class="extraPages">
-  <textarea id="page" cols="20" rows="50" placeholder="well...start note taking" ng-model = 'notes'></textarea>
+  <textarea id="page" cols="20" rows="50" placeholder="well...start note taking" ng-model = 'notes'>
+  </textarea>
+  <div class="shownotes" ng-repeat='note in savednotes'>{{note.notes}}</div>
+
   </span>
   <br>
+
   <footer class = "buttonSpace">
-    <button class="seeNotes" title="see note" ng-click = 'getNotes(notes)'>See Notes</button>
-    <!-- <button class="createPage" title="progress">Create New</button> -->
+    <a class="waves-effect waves-light btn" class="seeNotes" title="see note"  ng-click = 'getNotes()' ng-model='showNotes' ng-init='showNotes = true'><i class="material-icons right">assignment</i>See Notes</a>
+    <div class = 'showhidenotes' ng-if = 'showNotes'>
+
+      <!-- <div class="shownotes" ng-repeat='note in savednotes'>{{note.notes}}</div> -->
+  </div>
     <a class="waves-effect waves-light btn" ng-click='saveNote(notes)'><i class="material-icons right">mode_edit</i>Save Note</a>
-    <button class="editPage" title="edit note" ng-click= 'editNote(notes)'>Edit Note</button>
+    <!-- <button class="editPage" title="edit note" ng-click= 'editNote(notes)'>Edit Note</button> -->
   </footer>
 </div>

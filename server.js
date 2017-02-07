@@ -149,13 +149,10 @@ app.post('/api/notes', function(req, res) {
     })
 })
 
-app.get('/notes', function(req, res, next) {
-    db.getnote(req.body.notes),
-        function(err, success, next) {
-            res.status(200).json({
-                notes: body.notes
-            });
-        }
+app.get('/api/notes/:userid', function(req, res, next) {
+    db.getnote([req.params.userid], function(err, notes) {
+            res.status(200).json(notes);
+        })
 })
 
 app.put('/notes', function(req, res) {

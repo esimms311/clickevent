@@ -47,6 +47,7 @@ nav li {
 }
   h4, h5 {
   text-align: center;
+  /*border-bottom: 3px solid #25AAE1;*/
   }
   .agenda, .maps, .notes, .eventInfo{
     display: inline-flex;
@@ -213,7 +214,28 @@ nav li {
   left: -20px;
       padding: 0px 25px;
 }
+.shownotes {
+  background-color: #5ec4ed;
+  margin-left: 25px;
+  margin-right: 20px;
+  /* color: white; */
+  border-style: groove;
+  border-color: white;
+  border-width: thick;
+  padding-left: 10px;
+  /* position: absolute; */
+  top: 200px;
+  width: 87%;
+  height: 33px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+      }
+.mapAddress2 {
+  /*align-content: center;*/
+  margin-left: 91px;
+    font-size: 15px;
 
+}
 
 }
 /*body {

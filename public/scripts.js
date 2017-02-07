@@ -6,7 +6,9 @@ $(document).ready(function(){
     closeOnClick: true,
     draggable: true
   });
-  $('#showinquiry').click(function() {
+
+
+  $('.seenotes').click(function() {
     show('.submitQuestion');
   } );
   // $(".output").hide();

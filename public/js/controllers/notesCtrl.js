@@ -16,14 +16,15 @@ $scope.saveNote = function(notes){
 //   notesService.currentUser.notes
 // }
 
+$scope.getNotes = function(){
+  notesService.getNotes(userService.currentUser.id).then(function(res){
+    console.log(res.data);
+    $scope.savednotes = res.data
+  })
+}
 
 
 
 
-// getNotes: function(req, res, next) {
-//   res.status(200).json({
-//     noteObj.notes
-//   })
-// }
-//
+
 })
